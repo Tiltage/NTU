@@ -1,0 +1,34 @@
+int start=0,curr=0,lastleftoff=0;
+   while (*(str+start)!='\0')
+   {
+       if (*(str+start)==*(substr+curr))
+       {
+           //Check for exact comparision using curr
+           lastleftoff=start; // Storing last known value of starting index in case of failure of this check
+           while (*(substr+curr)!='\0')
+           {
+               if (*(str+start)==*(substr+curr))
+               {
+                   //printf("%c",*(str+start));
+                   //printf("%c",*(substr+curr));
+                   start++;
+                   curr++;
+               }
+               else // failure - resume check
+               {
+                   break;
+               }
+            }
+            if (*(substr+curr)=='\0')
+            {
+                //printf("Returns success");
+                return 1; //passes all checks; completes while loop
+            }
+            start=lastleftoff;
+            curr=0;
+            
+       }
+       //Else continue the search from where we left off
+       start++;
+   }
+   return 0;
