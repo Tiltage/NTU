@@ -1,0 +1,15 @@
+int i,count=1,longest=1;
+   for (i=0;i<(size-1);i++)
+   {
+       if (ar[i]==ar[i+1])
+       {
+           count++;
+       }
+       else if (count>longest)
+       {
+           longest=count;
+           count=1;
+       }
+   }
+   return longest;
+
