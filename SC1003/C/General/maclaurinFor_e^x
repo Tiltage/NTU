@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+   int denom=1,i;
+   float x;
+   float ans=1.00;
+   printf("Enter x: \n");
+   scanf("%f",&x);
+   for (i=1;i<10;i++)
+   {
+       ans+=(((float) pow(x,i))/((float) denom));
+       denom*=(i+1);
+       //printf("%d\n",denom);
+       //printf("%f\n",ans);
+   }
+   printf("Result = %.2f",ans);
+   return 0;
+}
