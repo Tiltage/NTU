@@ -17,3 +17,22 @@ while (anum<n1 && bnum<n2)
        bnum++;
        
    }
+   
+}
+if (n1<n2)
+{
+   for (bnum;bnum<n2;bnum++,cnum++)
+   {
+       c[cnum]=b[bnum];
+   }
+   
+}
+else
+{
+   for (anum;anum<n1;anum++,cnum++)
+   {
+       c[cnum]=a[anum];
+   }
+}
+
+return n1+n2;
