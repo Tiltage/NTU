@@ -1,0 +1,16 @@
+int row,col,sum=0;
+   for (row=0;row<4;row++)
+   {
+       for(col=0;col<4;col++)
+       {
+           if (col==3)
+           {
+           matrix[row][3]=sum;
+           }
+       else
+           {
+           sum=sum+matrix[row][col];
+           }
+       }
+        sum=0;
+   }
