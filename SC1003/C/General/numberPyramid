@@ -8,11 +8,11 @@
        {
            printf(" ");
        }
-       for (fnum=i+1;fnum<=2*i+1;fnum++) //print forward nums
+       for (fnum=i+1;fnum<=2*i+1;fnum++) //print ascending nums
        {
            printf("%d",(fnum%10));
        }
-       for (bnum=2*i;bnum>=i+1;bnum--) //print forward nums
+       for (bnum=2*i;bnum>=i+1;bnum--) //print descending nums
        {
            printf("%d",(bnum%10));
        }
