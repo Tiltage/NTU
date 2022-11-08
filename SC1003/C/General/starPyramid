@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main() 
+{        
+	/*edit*/
+   /* Write your code here */
+int row,i,space,height;
+printf("Enter the height: \n");
+scanf("%d",&height);
+printf("The pattern is: \n");
+for (row=0;row<height;row++)
+{
+    for (space=height-row-1;space>=1;space--) //print spaces
+    {
+        printf(" ");
+    }
+    for (i=0;i<row*2+1;i++)
+    {
+        printf("*");
+    }
+    printf("\n");
+}
+   
+   return 0;  
+}
