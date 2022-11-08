@@ -4,8 +4,6 @@
 #include <math.h>
 int main()
 {
-	/*edit*/
-   /* Write your code here */
 int num,ans=0,remainder,count=0;
 printf("Enter a decimal number: \n");
 scanf("%d",&num);
@@ -30,8 +28,6 @@ printf("The equivalent octal number: %d",ans);
 #include <math.h>
 int main()
 {
-	/*edit*/
-   /* Write your code here */
    int i,num,remainder,ans=0,count=0;
    printf("Enter a decimal number: \n");
    scanf("%d",&num);
@@ -52,8 +48,6 @@ int main()
 #include <math.h>
 int main()
 {      
-	/*edit*/
-   /* Write your code here */
 int i,count=0,num,remainder,ans=0;
 printf("Enter an octal number: \n");
 scanf("%d",&num);
@@ -65,5 +59,25 @@ while(num!=0)
     num/=10;
 }
 printf("The equivalent decimal number: %d",ans);
+   return 0;  
+}
+
+//binToDec
+
+#include <stdio.h>
+#include <math.h>
+int main() 
+{        
+   int ans=0,remainder,count=0,num;
+   printf("Enter a binary number: \n");
+   scanf("%d",&num);
+   while(num!=0)
+   {
+       remainder=num%10;
+       ans+=pow(2,count)*remainder;
+       count++;
+       num/=10;
+   }
+   printf("The equivalent decimal number: %d",ans);
    return 0;  
 }
