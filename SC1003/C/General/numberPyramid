@@ -1,0 +1,22 @@
+   int height,space,fnum,bnum,i;
+   printf("Enter the height: \n");
+   scanf("%d",&height);
+   printf("The pattern is: \n");
+   for (i=0;i<height;i++)
+   {
+       for(space=0;space<height-i;space++) //print spaces
+       {
+           printf(" ");
+       }
+       for (fnum=i+1;fnum<=2*i+1;fnum++) //print forward nums
+       {
+           printf("%d",(fnum%10));
+       }
+       for (bnum=2*i;bnum>=i+1;bnum--) //print forward nums
+       {
+           printf("%d",(bnum%10));
+       }
+       printf("\n");
+       //height--;
+   }
+
