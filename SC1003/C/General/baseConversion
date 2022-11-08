@@ -121,3 +121,49 @@ int hexStrToDec(char *hex)
    return ans;
 }
 
+//decToHex
+#include <stdio.h>
+void decTohexStr(char *str, int num);
+int main()
+{
+   int num,i;
+   char str[20];
+   printf("Enter a decimal number: \n");
+   scanf("%d",&num);
+   decTohexStr(str,num);
+   printf("decTohexStr(): ");
+   printf("%s\n",str);
+   return 0;
+}
+void decTohexStr(char *str, int num)
+{
+char *p2;
+int i,j,len;
+char temp;
+
+p2=str;
+while (num!=0)
+{
+    j=num%16;
+    if (j<10)
+    {
+        *p2=j+48;
+    }
+    else
+    {
+        *p2=j+55;
+    }
+    num=num/16;
+    p2++;
+}
+*p2='\0';
+len=strlen(str);
+for (i=0;i<len/2;i++)
+{
+    temp=*(str+i);
+    *(str+i)=*(str+len-1-i);
+    *(str+len-1-i)=temp;
+}
+
+}
+
