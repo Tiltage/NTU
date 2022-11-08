@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	/*edit*/
+   /* Write your code here */
+int num,ans=0,remainder,count=0;
+printf("Enter a decimal number: \n");
+scanf("%d",&num);
+while (num!=0)
+{
+    remainder=num%8;
+    ans+=pow(10,count)*remainder;
+    count++;
+    num/=8;
+}
+
+
+
+printf("The equivalent octal number: %d",ans);
+
+   return 0;  
+}
