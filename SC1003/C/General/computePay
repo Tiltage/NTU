@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main() 
+{        
+	/*edit*/
+   /* Write your code here */
+   int h;
+   float pay=0.0,tax;
+   printf("Enter hours of work:  \n");
+   scanf("%d",&h);
+   if (h<=40)
+   {
+       pay+=6.00*h;
+       tax=pay/10.00;
+       printf("Gross pay=%.2f \nTax=%.2f \nNet pay=%.2f\n",pay,tax,(pay-tax));
+   }
+   else 
+   {
+       pay+=240.00;
+       h-=40;
+       pay+=9.00*h;
+       tax=pay/10.00;
+       printf("Gross pay=%.2f \nTax=%.2f \nNet pay=%.2f\n",pay,tax,(pay-tax));
+   }
+   return 0;  
+}
