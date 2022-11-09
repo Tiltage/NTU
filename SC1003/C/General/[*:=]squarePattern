@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() 
+{        
+    int row,i,h;
+    printf("Enter the height: \n");
+    scanf("%d",&h);
+    printf("The pattern is: \n");
+    for (row=0;row<h;row++)
+    {
+        for(i=0;i<h-row-1;i++)
+        {
+            printf("*");
+        }
+        for(i=0;i<row+1;i++)
+        {
+            printf("=");
+        }
+        printf("\n");
+    }
+   return 0;  
+}
