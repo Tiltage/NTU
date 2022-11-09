@@ -1,8 +1,4 @@
-	/*edit*/
-
-/*custom header*/
 #include <string.h>
-	/*end_edit*/
 #include <stdio.h>
 void sortCharStr(char *str);
 int main()
@@ -35,7 +31,4 @@ for (i=0;i<len-1;i++)
     }
 
 }
-
-
-	/*end_edit*/
 }
