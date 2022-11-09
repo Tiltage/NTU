@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+#define MAX_SIZE 80
+void PigLatin(char *eword, char *PLword);
+int main()
+{
+   char eword[MAX_SIZE];
+   char PLword[MAX_SIZE];
+
+   printf("Enter your English word: \n");
+   scanf("%s", eword);
+   PigLatin(eword, PLword);
+   printf("PigLatin(): %s\n", PLword);
+   return 0;
+}
+void PigLatin(char *eword, char *PLword)
+{
+int i,len,index=0,k;
+len=strlen(eword);
+for (i=0;i<len;i++) //Finding first occurance of vowel/y
+{
+    if (*(eword+i)=='a' ||*(eword+i)=='e'||*(eword+i)=='i'||*(eword+i)=='o'||*(eword+i)=='u'||*(eword+i)=='y')
+    {
+        index=i;
+        break;
+    }
+}
+strcpy(PLword,(eword+index));
+strncat(PLword,eword,index);
+strcat(PLword,"ay");
+}
