@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main() 
+{
+	/*edit*/
+   /* Write your code here */
+    char k;
+    int digits=0,letter=0;
+    printf("Enter your characters (# to end): \n");
+    scanf("%c",&k);
+    while (k!='#')
+    {
+        if (isalpha(k))
+        {
+            letter++;
+        }
+        else if (isdigit(k))
+        {
+            digits++;
+        }
+        scanf("%c",&k);
+    }
+    printf("The number of digits: %d\n",digits);
+    printf("The number of letters: %d",letter);
+    return 0;
+}
