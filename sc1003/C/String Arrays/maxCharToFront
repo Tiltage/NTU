@@ -1,0 +1,33 @@
+int i,max=0,j=0,k=1;
+char target[20];
+for (i=0;i<strlen(str);i++)
+{
+   if (*(str+i)>max)
+   {
+       max=*(str+i);
+       j=i; //Store the index of maxChar in j
+   }
+}
+*(target)=max;
+//puts(target);
+for (i=0;i<strlen(str);i++)  //Iterate through orignal string to copy onto new string, when encounter j, pass. Else continue copy
+{
+    if (i!=j)
+    {
+        *(target+k)=*(str+i);
+        k++;
+        
+    }
+    else if (i==j)
+    {
+
+        //puts(target);
+        continue;
+    }
+    
+}
+//puts(target); - target is correct //Replace str with target
+for (i=0;i<strlen(str);i++)
+{
+    *(str+i)=*(target+i);
+}

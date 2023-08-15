@@ -1,0 +1,46 @@
+
+#include <string.h>
+#include <stdio.h>
+#define TRUE 1
+#define FALSE 0
+int romanNum(char *str);
+int main()
+{ 
+   int num;
+   char roman[10];
+   printf("Enter a Roman number: \n");
+   scanf("%s",roman);
+   num = romanNum(roman);
+   printf("romanNum(): %d\n", num);
+   return 0;
+}
+int romanNum(char *str)
+{        
+	/*edit*/
+   /* Write your code here */
+   int len,i=0,ans=0,index;
+   len=strlen(str);
+   while (*(str+i)) //counting number of 10s
+   {
+       while(*(str+i)=='X')
+       {
+           ans+=10;
+           i++;
+       }
+       break;
+   }
+   for (i;i<len;i++) //identify position of V or X
+   {
+       if (*(str+i+1)>*(str+i)) //E.g: IV, IX
+       {
+           ans += (*(str+i+1)=='V') ? 4 : 9;
+           break;
+           printf("%d",ans);
+       }
+       else //E.g VI, VII, VIII
+       {
+           ans += (*(str+i)=='V') ? 5 : 1;
+       }
+   }
+   return ans;
+}

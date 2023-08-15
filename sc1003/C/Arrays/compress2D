@@ -1,0 +1,18 @@
+ int row,col,count;
+   for (row=0;row<rowSize;row++)
+   {
+       count=0;
+       for(col=0;col<colSize;col++)
+       {
+           if (data[row][col]!=data[row][col+1] || col==(colSize-1))
+           {
+               printf("%d %d ",data[row][col],++count);
+               count=0;
+           }
+           else
+           {
+               count++;
+           }
+        }
+        printf("\n");
+   }

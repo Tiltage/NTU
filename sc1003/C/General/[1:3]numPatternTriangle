@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+  int k,i,curr=1,j;
+  printf("Enter the height: \n");
+  scanf("%d",&k);
+  puts("Pattern:");
+  for (i=1;i<k+1;i++)
+  {
+    for (j=0;j<i;j++)
+    {
+      printf("%d",curr = (curr%3)?curr%3:3);
+    }
+    printf("\n");
+    curr++;
+  }
+  return 0;
+}

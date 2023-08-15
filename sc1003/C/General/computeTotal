@@ -1,0 +1,26 @@
+#include <string.h>
+#include <stdio.h>
+int main() 
+{     
+    int lines,digits,i,k,sum=0;
+    char num;
+    printf("Enter number of lines:  \n");
+    scanf("%d",&lines);
+    for (i=0;i<lines;i++)
+    {
+        printf("Enter line %d: \n",i+1);
+        scanf("%d",&digits);
+        for(k=0;k<digits*2;k++)
+        {
+            scanf("%c",&num);
+            if(isdigit(num))
+            {
+                //printf("%d: %d",k,num-47);
+                sum+=(int)num-48;
+            }
+        }
+        printf("Total: %d\n",sum);
+        sum=0;
+    }
+   return 0;
+}

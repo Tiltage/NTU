@@ -1,0 +1,24 @@
+int i=0,acount=0,bcount=0;
+while (a[acount]!='\0' && b[bcount]!='\0')
+{
+    if (a[acount]<b[bcount])
+    {
+        c[i]=a[acount];
+        acount++;
+    }
+    else
+    {
+        c[i]=b[bcount];
+        bcount++;
+    }
+    i++;
+}
+c[i]='\0';
+if (a[acount]=='\0')
+{
+    strcat(c,(b+bcount));
+}
+else
+{
+    strcat(c,(a+acount));
+}

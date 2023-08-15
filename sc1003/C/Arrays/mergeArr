@@ -1,0 +1,38 @@
+int anum=0,bnum=0,cnum=0;
+while (anum<n1 && bnum<n2)
+{
+   //printf("cnum: %d\n",cnum);
+   if (a[anum]<b[bnum])
+   {
+       //printf("anum: %d\n",anum);
+       c[cnum]=a[anum];
+       cnum++;
+       anum++;
+   }
+   else
+   {
+       //printf("bnum: %d\n",bnum);
+       c[cnum]=b[bnum];
+       cnum++;
+       bnum++;
+       
+   }
+   
+}
+if (n1<n2)
+{
+   for (bnum;bnum<n2;bnum++,cnum++)
+   {
+       c[cnum]=b[bnum];
+   }
+   
+}
+else
+{
+   for (anum;anum<n1;anum++,cnum++)
+   {
+       c[cnum]=a[anum];
+   }
+}
+
+return n1+n2;

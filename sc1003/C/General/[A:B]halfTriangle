@@ -1,0 +1,42 @@
+#include <stdio.h>
+int main() 
+{
+    int row,i,h,k;
+    printf("Enter the height: \n");
+    scanf("%d",&h);
+    printf("The pattern is: \n");
+    for (row=0;row<h;row++)
+    {
+        if (row%2==0) //Odd rows, start with 'B'
+        {
+            for (i=0;i<row+1;i++)
+            {
+                if (i%2)
+                {
+                    printf("B");
+                }
+                else 
+                {
+                    printf("A");
+                }
+            }
+        }
+        else //Evenn rows, start with 'A'
+        {
+            for (i=1;i<=row+1;i++)
+            {
+                if (i%2)
+                {
+                    printf("B");
+                }
+                else 
+                {
+                    printf("A");
+                }
+            }
+        }
+        printf("\n");
+        
+    }
+   return 0;
+}
